@@ -1,0 +1,6 @@
+C:\Users\Celia\source\repos\2.3\2.3\bin\Debug\2.3.exe.config
+C:\Users\Celia\source\repos\2.3\2.3\bin\Debug\2.3.exe
+C:\Users\Celia\source\repos\2.3\2.3\bin\Debug\2.3.pdb
+C:\Users\Celia\source\repos\2.3\2.3\obj\Debug\2.3.csproj.CoreCompileInputs.cache
+C:\Users\Celia\source\repos\2.3\2.3\obj\Debug\2.3.exe
+C:\Users\Celia\source\repos\2.3\2.3\obj\Debug\2.3.pdb
