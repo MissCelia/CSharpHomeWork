@@ -1,0 +1,7 @@
+C:\Users\Celia\source\repos\4.2\4.2\bin\Debug\4.2.exe.config
+C:\Users\Celia\source\repos\4.2\4.2\bin\Debug\4.2.exe
+C:\Users\Celia\source\repos\4.2\4.2\bin\Debug\4.2.pdb
+C:\Users\Celia\source\repos\4.2\4.2\obj\Debug\4.2.csprojAssemblyReference.cache
+C:\Users\Celia\source\repos\4.2\4.2\obj\Debug\4.2.csproj.CoreCompileInputs.cache
+C:\Users\Celia\source\repos\4.2\4.2\obj\Debug\4.2.exe
+C:\Users\Celia\source\repos\4.2\4.2\obj\Debug\4.2.pdb
