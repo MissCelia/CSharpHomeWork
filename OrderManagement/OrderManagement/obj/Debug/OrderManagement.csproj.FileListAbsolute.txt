@@ -1,0 +1,7 @@
+C:\Users\Celia\source\repos\OrderManagement\OrderManagement\bin\Debug\OrderManagement.exe.config
+C:\Users\Celia\source\repos\OrderManagement\OrderManagement\bin\Debug\OrderManagement.exe
+C:\Users\Celia\source\repos\OrderManagement\OrderManagement\bin\Debug\OrderManagement.pdb
+C:\Users\Celia\source\repos\OrderManagement\OrderManagement\obj\Debug\OrderManagement.csprojAssemblyReference.cache
+C:\Users\Celia\source\repos\OrderManagement\OrderManagement\obj\Debug\OrderManagement.csproj.CoreCompileInputs.cache
+C:\Users\Celia\source\repos\OrderManagement\OrderManagement\obj\Debug\OrderManagement.exe
+C:\Users\Celia\source\repos\OrderManagement\OrderManagement\obj\Debug\OrderManagement.pdb
