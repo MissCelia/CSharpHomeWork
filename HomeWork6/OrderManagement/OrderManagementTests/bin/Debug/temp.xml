@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ArrayOfOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Order>
+    <OrderNumber>521</OrderNumber>
+    <Customer>Sam</Customer>
+  </Order>
+  <Order>
+    <OrderNumber>0</OrderNumber>
+    <Customer>Jam</Customer>
+  </Order>
+</ArrayOfOrder>
