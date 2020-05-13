@@ -1,0 +1,642 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="采用Maven 聚合工程搭建 Spring Cloud 使用工具： IntelliJ IDEA 版本： 2019.2.2 maven 版本： 3.6.0 JDK 版本：1.8.0_181 1、搭建聚合" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>利用 Maven 构造 Spring Cloud 微服务架构 模块使用 spring Boot构建 - 律持乐 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip.min.css?v=1CubIA3L29CO3-6VLJIOrrj2uGfyKeX_-xaumWzHk7o" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/bert227/custom.css?v=98YIiEjEXswoXovGSO/TMriDxvM=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip-mobile.min.css?v=0pGk3D9Ik_jI4q1TALBT2ybOjIePHS_80_0J4DDOQiY" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/bert227/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/bert227/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/bert227/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=ADZDggF2NY5PM0ARXcJqg_CWlG3B72Ho5xCyukyKFbg"></script>
+    <script>
+        var currentBlogId = 439015;
+        var currentBlogApp = 'bert227';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'darkgreentrip';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/bert227/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/bert227/">律持乐</a>
+</h1>
+<h2>
+志不强者智不达！
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/bert227/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%BE%8B%E6%8C%81%E4%B9%90">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/bert227/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+59&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+4</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/bert227/p/12882947.html">利用 Maven 构造 Spring Cloud 微服务架构 模块使用 spring Boot构建</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p><span style="font-size: 18px;">采用Maven 聚合工程搭建 Spring Cloud&nbsp;</span></p>
+<p><span style="font-size: 18px;">　　使用工具：</span></p>
+<p><span style="font-size: 18px;">　　　　IntelliJ IDEA&nbsp; &nbsp; 版本： 2019.2.2</span></p>
+<p><span style="font-size: 18px;">　　　　maven&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;版本： 3.6.0</span></p>
+<p><span style="font-size: 18px;">　　　　JDK&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;版本：1.8.0_181</span></p>
+<p><span style="font-size: 18px;">1、搭建聚合工程的父模块</span></p>
+<p><span style="font-size: 18px;"><img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513093553325-693166255.png" alt=""></span></p>
+<p>&nbsp;</p>
+<p><img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513094019220-907819207.png" alt=""></p>
+<p>&nbsp;</p>
+<p><img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513094155295-1571244875.png" alt=""></p>
+<p>&nbsp;<img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513094746762-1131698277.png" alt=""></p>
+<p><span style="font-size: 18px;">2、配置父模块POM</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;?</span><span style="color: #ff00ff;">xml version="1.0" encoding="UTF-8"</span><span style="color: #0000ff;">?&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">project </span><span style="color: #ff0000;">xmlns</span><span style="color: #0000ff;">="http://maven.apache.org/POM/4.0.0"</span><span style="color: #ff0000;">
+         xmlns:xsi</span><span style="color: #0000ff;">="http://www.w3.org/2001/XMLSchema-instance"</span><span style="color: #ff0000;">
+         xsi:schemaLocation</span><span style="color: #0000ff;">="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">modelVersion</span><span style="color: #0000ff;">&gt;</span>4.0.0<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">modelVersion</span><span style="color: #0000ff;">&gt;</span>
+
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>com.hai.cloud<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>haiSpringCloud<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">description</span><span style="color: #0000ff;">&gt;</span>this project is haiSpringCloud<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">description</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">name</span><span style="color: #0000ff;">&gt;</span>haiSpringCloud<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">name</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">version</span><span style="color: #0000ff;">&gt;</span>1.0.0<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">version</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">packaging</span><span style="color: #0000ff;">&gt;</span>pom<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">packaging</span><span style="color: #0000ff;">&gt;</span><span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 父类型都为pom类型   父模块是用于 子模块继承， 一处声明，多处使用，因此packaging是pom </span><span style="color: #008000;">--&gt;</span> 
+
+
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">parent</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>org.springframework.boot<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>spring-boot-starter-parent<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">version</span><span style="color: #0000ff;">&gt;</span>2.2.0.RELEASE<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">version</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">relativePath</span><span style="color: #0000ff;">/&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">parent</span><span style="color: #0000ff;">&gt;</span>
+
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">properties</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">java.version</span><span style="color: #0000ff;">&gt;</span>1.8<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">java.version</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">project.build.soutceEncoding</span><span style="color: #0000ff;">&gt;</span>UTF-8<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">project.build.soutceEncoding</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">project.reporting.outputEncoding</span><span style="color: #0000ff;">&gt;</span>UTF-8<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">project.reporting.outputEncoding</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">spring-cloud.version</span><span style="color: #0000ff;">&gt;</span>Hoxton.SR4<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">spring-cloud.version</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">properties</span><span style="color: #0000ff;">&gt;</span>
+
+    <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 设定主仓库路径 会按照设定顺序去查找</span><span style="color: #008000;">--&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">repositories</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #008000;">&lt;!--</span><span style="color: #008000;">  阿里中央仓库  首选</span><span style="color: #008000;">--&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">repository</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">id</span><span style="color: #0000ff;">&gt;</span>alimaven<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">id</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">name</span><span style="color: #0000ff;">&gt;</span>aliyum maven<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">name</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">url</span><span style="color: #0000ff;">&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">url</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">repository</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">repositories</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 设置仓库插件路径 </span><span style="color: #008000;">--&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">pluginRepositories</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">pluginRepository</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">id</span><span style="color: #0000ff;">&gt;</span>alimaven<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">id</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">name</span><span style="color: #0000ff;">&gt;</span>aliyum maven<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">name</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">url</span><span style="color: #0000ff;">&gt;</span>http://maven.aliyun.com/nexus/content/groups/public<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">url</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">pluginRepository</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">pluginRepositories</span><span style="color: #0000ff;">&gt;</span>
+
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependencies</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #008000;">&lt;!--</span><span style="color: #008000;">下面的web、test在spring boot 生态中成为Starter POMs，是一套一站式spring相关技术解决方案，starter POMs采用spring-boot-starter-*的命名方式，如:spring-boot-starter-jdbc</span><span style="color: #008000;">--&gt;</span>
+        <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 全栈Web开发模块，包含嵌入式的Tomcate、Spring MVC </span><span style="color: #008000;">--&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>org.springframework.boot<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>spring-boot-starter-web<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">exclusions</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">exclusion</span><span style="color: #0000ff;">&gt;</span>
+                    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>org.springframework.boot<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+                    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>spring-boot-starter-logging<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">exclusion</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">exclusions</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span> <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 引入log4j2依赖  spring boot 用log4j2</span><span style="color: #008000;">--&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>org.springframework.boot<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>spring-boot-starter-log4j2<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+
+        <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 通用的测试模块，包含JUnit、Hamcrest、Mockito </span><span style="color: #008000;">--&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>org.springframework.boot<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>spring-boot-starter-test<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">scope</span><span style="color: #0000ff;">&gt;</span>test<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">scope</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">exclusions</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">exclusion</span><span style="color: #0000ff;">&gt;</span>
+                    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>org.junit.vintage<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+                    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>junit-vintage-engine<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">exclusion</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">exclusions</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+
+        <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 热部署模块
+                    devtools 监听classpath下的文件变动，并会立即重启应用，采用的是虚拟机机制，so重启很快
+                    注意：（1）base classloader (Base类加载器) 加载不改变的class,例如第三方提供的jar
+                          (2) restart classloader(Restart类加载器) 加载正在开发的Class
+                        重启之所以很快是因为只加载了开发的Class，没有重新加载第三方的jar </span><span style="color: #008000;">--&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>org.springframework.boot<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>spring-boot-devtools<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">scope</span><span style="color: #0000ff;">&gt;</span>runtime<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">scope</span><span style="color: #0000ff;">&gt;</span><span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 这个需要为 true 热部署才有效 </span><span style="color: #008000;">--&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">optional</span><span style="color: #0000ff;">&gt;</span>true<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">optional</span><span style="color: #0000ff;">&gt;</span><span style="color: #008000;">&lt;!--</span><span style="color: #008000;">optional=true 依赖不会传递，该项目依赖devtools</span><span style="color: #008000;">--&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+
+        <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 用于监控端点 (运维监控)
+        添加该配置，控制台会有以下内容输出： o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+        访问http://localhost:8081/actuator 就可以获得该应用的各项监控指标 </span><span style="color: #008000;">--&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>org.springframework.boot<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>spring-boot-starter-actuator<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+
+        <span style="color: #008000;">&lt;!--</span><span style="color: #008000;">阿里 FastJson依赖</span><span style="color: #008000;">--&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>com.alibaba<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>fastjson<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">version</span><span style="color: #0000ff;">&gt;</span>1.2.68<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">version</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+
+        <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> 启用注解读取配置文件支持 </span><span style="color: #008000;">--&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>org.springframework.boot<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>spring-boot-configuration-processor<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">optional</span><span style="color: #0000ff;">&gt;</span>true<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">optional</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+        
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependencies</span><span style="color: #0000ff;">&gt;</span>
+
+    <span style="color: #008000;">&lt;!--</span><span style="color: #008000;">  dependencyManagement 标签不会引入依赖  </span><span style="color: #008000;">--&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependencyManagement</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependencies</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> spring-cloud 版本 </span><span style="color: #008000;">--&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>org.springframework.cloud<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>spring-cloud-dependencies<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">version</span><span style="color: #0000ff;">&gt;</span>${spring-cloud.version}<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">version</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">type</span><span style="color: #0000ff;">&gt;</span>pom<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">type</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">scope</span><span style="color: #0000ff;">&gt;</span>import<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">scope</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependencies</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependencyManagement</span><span style="color: #0000ff;">&gt;</span>
+
+    <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> spring-boot-maven-plugin插件可以方便的启停应用， 通过 mvn spring-boot:run 命令快速启动Spring Boot应用 </span><span style="color: #008000;">--&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">build</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">plugins</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">plugin</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>org.springframework.boot<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>spring-boot-maven-plugin<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">configuration</span><span style="color: #0000ff;">&gt;</span>
+                    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">environmentVariables</span><span style="color: #0000ff;">&gt;</span>
+                        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">encoding</span><span style="color: #0000ff;">&gt;</span>UTF-8<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">encoding</span><span style="color: #0000ff;">&gt;</span>
+                        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">source</span><span style="color: #0000ff;">&gt;</span>1.8<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">source</span><span style="color: #0000ff;">&gt;</span>
+                        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">target</span><span style="color: #0000ff;">&gt;</span>1.8<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">target</span><span style="color: #0000ff;">&gt;</span>
+                        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">compilerArguments</span><span style="color: #0000ff;">&gt;</span>
+                            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">verbose</span><span style="color: #0000ff;">/&gt;</span>
+                            <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> windows下使用分号（;）分隔，linux/mac下使用冒号（:）分隔 </span><span style="color: #008000;">--&gt;</span>
+                            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">bootclasspath</span><span style="color: #0000ff;">&gt;</span>${java.home}/lib/rt.jar;${java.home}/lib/jce.jar<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">bootclasspath</span><span style="color: #0000ff;">&gt;</span>
+                        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">compilerArguments</span><span style="color: #0000ff;">&gt;</span>
+                    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">environmentVariables</span><span style="color: #0000ff;">&gt;</span>
+                <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">configuration</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">plugin</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">plugins</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">build</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">project</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p><span style="font-size: 18px;"><span style="font-size: 18px;">3、创建Spring Cloud 核心模块， Eureka注册中心</span></span></p>
+<p><span style="font-size: 18px;">　　3.1 通过spring Boot 搭建Eureka注册中心</span></p>
+<p><span style="font-size: 18px;">　<img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513102215174-108088639.png" alt=""></span></p>
+<p>&nbsp;<img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513102345205-1834372341.png" alt=""></p>
+<p>&nbsp;<img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513104034054-1241014065.png" alt=""></p>
+<p>&nbsp;<img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513104216538-188101200.png" alt=""></p>
+<p>&nbsp;<img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513104940797-234383454.png" alt=""></p>
+<p><span style="font-size: 18px;">&nbsp;　　3.2、由于这是一个子模块，需要继承父模块，修改pom.xml</span></p>
+<p><span style="font-size: 18px;">&nbsp; &nbsp; &nbsp;&nbsp;<img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513105251814-1154489570.png" alt=""></span></p>
+<p><span style="font-size: 18px;">&nbsp; &nbsp; &nbsp; &nbsp;<img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513105628118-724097594.png" alt=""></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">　　在父模块pom.xml中添加hai-uereka模块</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">modules</span><span style="color: #0000ff;">&gt;</span>
+     <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">module</span><span style="color: #0000ff;">&gt;</span>hai-eureka<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">module</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">modules</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p><span style="font-size: 18px;">3.3、修改resources/application.properties为application-dev.yml （Spring Boot 支持 .properties 和 .yml 个人喜欢用yml，这个不改也可以），添加以下配置</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">#ָ指定应用名 在spring Cloud 中会被注册为服务名
+spring:
+  application:
+    name: hai-eureka
+  profiles:
+    active: dev
+
+#指定端口
+server:
+  port: 8760
+
+eureka:
+  server: # 详见 org.springframework.cloud.netflix.eureka.server.EurekaServerConfigBean
+    enable-self-preservation: false  #关闭保护机制 eureka 当心跳失败率大于85%就会触发自我保护，Eureka Server不剔除已关停的节点，这里关闭eureka保护机制
+    eviction-interval-timer-in-ms: 10000 #设置清理无效节点的时间间隔，毫秒单位（默认是60秒），这里修改为10秒
+    peer-eureka-nodes-update-interval-ms: 1000
+    wait-time-in-ms-when-sync-empty: 0
+  instance:
+    hostname: localhost
+  client: # 详见 org.springframework.cloud.netflix.eureka.EurekaClientConfigBean
+    register-with-eureka: false #eureka默认既可以做服务端也可以做客户端， 由于该应用为注册中心，所以设置为false,代表不向注册中心注册自己
+    fetch-registry: false  #注册中心的职责就是维护服务实例，他并不需要去检索服务，所以也设置为false
+    eureka-server-total-connections: 200 # 总连接数，默认200
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/</span></pre>
+</div>
+<p><span style="font-size: 18px;">3.4 在启动类添加&nbsp;</span><span style="font-size: 18px;">@EnableEurekaServer，开启服务注册功能</span></p>
+<p><span style="font-size: 18px;"><img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513145842845-640905120.png" alt=""></span></p>
+<p><span style="font-size: 18px;">&nbsp;3.5修改启动配置，指定dev环境 （-Dspring.profiles.active=dev）并启动&nbsp;&nbsp;</span></p>
+<p><span style="font-size: 18px;"><img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513150105790-1057388537.png" alt=""></span></p>
+<p><span style="font-size: 18px;">　　&nbsp;接下来就是见证奇迹的时刻了，用浏览器打开 http://localhost:8760 , 访问成功</span></p>
+<p><span style="font-size: 18px;">Spring Cloud 核心组件 注册中心已经搭好了，这会就可以喝点东西休息休息啦</span></p>
+<p><span style="font-size: 18px;"><img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513152056615-610731470.png" alt=""></span></p>
+<p><span style="font-size: 18px;">4、接下来就该创建服务提供者，注册到Eureka注册中心去</span></p>
+<p><span style="font-size: 18px;">　　4.1 还是用Spring Boot 创建 创建 子模块</span></p>
+<p><span style="font-size: 18px;">&nbsp;<img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513152642131-249172345.png" alt="" width="588" height="715">&nbsp; &nbsp; &nbsp;<img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513160257464-213287770.png" alt="" width="651" height="712"></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;"></span></p>
+<p>&nbsp;&nbsp;<img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513160357565-2099394995.png" alt="" width="600" height="722">&nbsp; &nbsp;<img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513160422860-1067808260.png" alt="" width="628" height="722"></p>
+<p>&nbsp;</p>
+<p>&nbsp;<span style="font-size: 18px;">　　4.2 修改producer&nbsp; pom文件，</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;?</span><span style="color: #ff00ff;">xml version="1.0" encoding="UTF-8"</span><span style="color: #0000ff;">?&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">project </span><span style="color: #ff0000;">xmlns</span><span style="color: #0000ff;">="http://maven.apache.org/POM/4.0.0"</span><span style="color: #ff0000;"> xmlns:xsi</span><span style="color: #0000ff;">="http://www.w3.org/2001/XMLSchema-instance"</span><span style="color: #ff0000;">
+         xsi:schemaLocation</span><span style="color: #0000ff;">="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">modelVersion</span><span style="color: #0000ff;">&gt;</span>4.0.0<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">modelVersion</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">parent</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>com.hai.cloud<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>haiSpringCloud<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">version</span><span style="color: #0000ff;">&gt;</span>1.0.0<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">version</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">relativePath</span><span style="color: #0000ff;">/&gt;</span> <span style="color: #008000;">&lt;!--</span><span style="color: #008000;"> lookup parent from repository </span><span style="color: #008000;">--&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">parent</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>com.hai.cloud<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>producer<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">version</span><span style="color: #0000ff;">&gt;</span>1.0.0<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">version</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">name</span><span style="color: #0000ff;">&gt;</span>producer<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">name</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">description</span><span style="color: #0000ff;">&gt;</span>producer project for Spring Boot<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">description</span><span style="color: #0000ff;">&gt;</span>
+
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependencies</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>org.springframework.cloud<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">groupId</span><span style="color: #0000ff;">&gt;</span>
+            <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>spring-cloud-starter-netflix-eureka-client<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">artifactId</span><span style="color: #0000ff;">&gt;</span>
+        <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependency</span><span style="color: #0000ff;">&gt;</span>
+
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">dependencies</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">project</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p><span style="font-size: 18px;">　　4.3 修改&nbsp;application.properties 为application-dev.yml ，添加以下配置</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;"># 指定应用名 在spring Cloud 中会被注册为服务名
+spring:
+  profiles:
+    active: dev
+  application:
+    name: hai-producer
+server:
+  port: 8081
+
+eureka:
+  client:
+    register-with-eureka: true  #该应用作为客户端 向eureka 注册 服务  默认是 true
+    fetch-registry: true  # 允许检索服务  默认是 true
+    serviceUrl:
+      defaultZone: http://localhost:8760/eureka/
+  instance:
+    #prefer-ip-address: true  我这里用的是 hostname 使用IP 需要设置该项为 true
+    hostname: localhost
+    lease-renewal-interval-in-seconds: 30 # 服务续约任务的调用时间间隔， 单位秒， 默认30s
+    lease-expiration-duration-in-seconds: 90 # 服务失效时间，单位秒  默认90s</span></pre>
+</div>
+<p><span style="font-size: 18px;">　　4.4 修改启动，添加&nbsp;</span><span style="font-size: 18px;">@EnableDiscoveryClient&nbsp;</span></p>
+<p><span style="font-size: 18px;"><img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513163638240-1115013766.png" alt=""></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;"></span></p>
+<p><span style="font-size: 18px;">&nbsp;　　4.5、创建controller ,写个测试接口，打印一些服务信息</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">package</span><span style="color: #000000;"> com.hai.cloud.producer.controller;
+
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.apache.logging.log4j.LogManager;
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.apache.logging.log4j.Logger;
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.springframework.beans.factory.annotation.Autowired;
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.springframework.cloud.client.ServiceInstance;
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.springframework.cloud.client.discovery.composite.CompositeDiscoveryClient;
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.springframework.web.bind.annotation.RequestMapping;
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.springframework.web.bind.annotation.RequestMethod;
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.springframework.web.bind.annotation.RestController;
+
+</span><span style="color: #008000;">/**</span><span style="color: #008000;">
+ * @program: haiSpringCloud
+ * @description: 用户相关控制类
+ * </span><span style="color: #808080;">@author</span><span style="color: #008000;">: lizhihai
+ * @create: 2020-05-04
+ </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+@RestController
+</span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> UserController {
+
+    Logger log </span>=<span style="color: #000000;"> LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
+
+    </span><span style="color: #008000;">/**</span><span style="color: #008000;">
+     * 高版本的 spring cloud 需要用CompositeDiscoveryClient 通过serverid获取instance对象
+     </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+    @Autowired
+    CompositeDiscoveryClient discoveryClient;
+
+    @RequestMapping(value </span>= "/index", method =<span style="color: #000000;"> RequestMethod.GET)
+    </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> String index(){
+        </span><span style="color: #008000;">//</span><span style="color: #008000;">打印服务信息</span>
+        <span style="color: #0000ff;">this</span>.stuServerInfo("/index"<span style="color: #000000;">);
+        </span><span style="color: #0000ff;">return</span> "Hello World"<span style="color: #000000;">;
+    }
+
+    </span><span style="color: #008000;">/**</span><span style="color: #008000;">
+     * @Description:  打印服务信息
+     * @Param: path 接口路径
+     * @Author: lizhihai
+     * @Date: 2020/5/4
+     </span><span style="color: #008000;">*/</span>
+    <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">void</span><span style="color: #000000;"> stuServerInfo(String path){
+        </span><span style="color: #008000;">//</span><span style="color: #008000;">获取serviceId</span>
+        String serviceId = discoveryClient.getServices().get(0<span style="color: #000000;">);
+        </span><span style="color: #008000;">//</span><span style="color: #008000;">通过 serceId获取Instance对象</span>
+        ServiceInstance instance = discoveryClient.getInstances(serviceId).get(0<span style="color: #000000;">);
+        log.info(</span>"HOST==&gt;" +<span style="color: #000000;"> instance.getHost());
+        log.info(</span>"SERVICEID==&gt;" +<span style="color: #000000;"> instance.getServiceId());
+        log.info(</span>"INSTANCEID==&gt;" +<span style="color: #000000;"> instance.getInstanceId());
+        log.info(</span>"URL==&gt;" + instance.getUri() +<span style="color: #000000;"> path);
+    }
+}</span></pre>
+</div>
+<p><span style="font-size: 18px;">　　4.6 、配置启动项 ，指定环境变量 -Dspring.profiles.active=dev, 并启动</span></p>
+<p><span style="font-size: 18px;"><img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513164829185-1589751806.png" alt=""></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;"></span></p>
+<p><span style="font-size: 18px;">&nbsp;再次访问http://localhost:8760 就会发现application多了一条数据，可以与我前面的截图对比</span></p>
+<p><img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513165545762-1804511987.png" alt=""></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">5、创建消费者模块</span></p>
+<p><span style="font-size: 18px;">　　流程和上面的一样</span></p>
+<p><span style="font-size: 18px;">　　在启动类中添添加</span><span style="font-size: 18px;">@EnableDiscoveryClient 并添加以下方法</span></p>
+<div class="cnblogs_code">
+<pre>    <span style="color: #008000;">/**</span><span style="color: #008000;">
+     * @Description: RestTemplate 会使用Ribbon 的自动化配置
+     *              通过LoadBalanced 可以开启客户端的负载均衡
+     * @Author: lizhihai
+     * @Date: 2020/5/13
+     </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+    @Bean
+    @LoadBalanced
+    </span><span style="color: #0000ff;">public</span><span style="color: #000000;"> RestTemplate restTemplate() {
+        </span><span style="color: #0000ff;">return</span> <span style="color: #0000ff;">new</span><span style="color: #000000;"> RestTemplate();
+    }</span></pre>
+</div>
+<p><span style="font-size: 18px;">创建一个Controller，通过服务名调用producer 的接口</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.springframework.beans.factory.annotation.Autowired;
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.springframework.http.ResponseEntity;
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.springframework.web.bind.annotation.RequestMapping;
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.springframework.web.bind.annotation.RequestMethod;
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.springframework.web.bind.annotation.RestController;
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> org.springframework.web.client.RestTemplate;
+
+</span><span style="color: #008000;">/**</span><span style="color: #008000;">
+ * @program: haiSpringCloud
+ * @description: 服务消费
+ * </span><span style="color: #808080;">@author</span><span style="color: #008000;">: lizhihai
+ * @create: 2020-05-13
+ </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+@RestController
+</span><span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span><span style="color: #000000;"> ConsumerController {
+    @Autowired
+    RestTemplate restTemplate;
+
+    </span><span style="color: #008000;">/**</span><span style="color: #008000;">
+     * @Description:  通过Ribbon 调用无参的GET请求 除了 getForEntity 还有 getForObject  、
+     *          调用SPRING-BOOT-PRODUCER 服务的index接口
+     * @Author: lizhihai
+     * </span><span style="color: #808080;">@return</span><span style="color: #008000;">: ResponseEntity对象是Spring对HTTP请求响应的封装，其中包括：HttpStatus（404、500） 、 HttpEntity 、 HttpHeaders
+     * @Date: 2020/5/13
+     </span><span style="color: #008000;">*/</span><span style="color: #000000;">
+    @RequestMapping(value </span>= "/indexConsumer1", method =<span style="color: #000000;"> RequestMethod.GET)
+    </span><span style="color: #0000ff;">public</span> ResponseEntity&lt;String&gt;<span style="color: #000000;"> indexConsumer1(){
+        ResponseEntity</span>&lt;String&gt; responseEntity = restTemplate.getForEntity("http://HAI-PRODUCER/index", String.<span style="color: #0000ff;">class</span><span style="color: #000000;">);
+        </span><span style="color: #0000ff;">return</span><span style="color: #000000;"> responseEntity;
+    }
+}</span></pre>
+</div>
+<p><span style="font-size: 18px;">&nbsp;以9001端口启动，</span></p>
+<p><span style="font-size: 18px;">注册中心多了一条application</span></p>
+<p><img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513194920297-1560356280.png" alt=""></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">访问 localhost:9001/indexConsumer1 如下：</span></p>
+<p><img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513194700102-445589645.png" alt=""></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">&nbsp;HAI-PRODUCER 服务控制台输出</span></p>
+<p><img src="https://img2020.cnblogs.com/blog/1424024/202005/1424024-20200513194803977-1203479486.png" alt=""></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18px;">&nbsp;我们前台调用 localhost:9001/indexConsumer1, 通过注册中心调用了 HAI-PRODUCER/index 接口</span></p>
+<p><span style="font-size: 18px;">到这里就打工告成了</span></p>
+<p>&nbsp;</p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-13 19:54</span>&nbsp;
+<a href="https://www.cnblogs.com/bert227/">律持乐</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12882947" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12882947);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 439015, cb_blogApp = 'bert227', cb_blogUserGuid = '69410b41-7596-40f6-e9e5-08d5d38bf026';
+    var cb_entryId = 12882947, cb_entryCreatedDate = '2020-05-13 19:54', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 律持乐
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

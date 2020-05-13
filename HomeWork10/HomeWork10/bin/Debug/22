@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="在早期，CPU都是以单核的形式顺序执行机器指令。C语言、PHP正是这种顺序编程语言的代表，即所有的指令都是以串行的方式执行，在相同的时刻有且仅有一个CPU在顺序执行程序的指令。随着处理器技术的发展，单" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>golang并发编程 - luke44 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/custom/bundle-custom.min.css?v=1ssrnY3Il79Ok472qeVrpxlSprSXcHhYPgZC5S3wtVM" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/luke44/custom.css?v=E12RB34x4b10l2Xm8jPcPLAb5Ns=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/custom/bundle-custom-mobile.min.css?v=-Yh290MhQyDeXLmvKTSses9H6-49lqbpXFh55zvS0w8" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/luke44/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/luke44/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/luke44/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=ADZDggF2NY5PM0ARXcJqg_CWlG3B72Ho5xCyukyKFbg"></script>
+    <script>
+        var currentBlogId = 481000;
+        var currentBlogApp = 'luke44';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'Custom';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    <div id="page_begin_html">
+        <script>loadPageBeginHtml();</script>
+    </div>
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/luke44/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/luke44/">Luke's Blog</a>
+</h1>
+<h2>
+左手代码，右手擦泪
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/luke44/">
+首页</a>
+</li>
+<li>
+
+
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/luke44">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/luke44/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+8&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+3</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/luke44/p/12884177.html">golang并发编程</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+    <div id="cnblogs_post_description" style="display: none">
+        在早期，CPU都是以单核的形式顺序执行机器指令。C语言、PHP正是这种顺序编程语言的代表，即所有的指令都是以串行的方式执行，在相同的时刻有且仅有一个CPU在顺序执行程序的指令。随着处理器技术的发展，单核时代以提升处理器频率来提高运行效率的方式遇到了瓶颈。单核CPU的发展的停滞，给多核CPU的发展带来了机遇。相应地，编程语言也开始逐步向并行化的方向发展。Go语言正是在多核和网络化的时代背景下诞生的原生支持并发的编程语言。
+    </div>
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p>在早期，CPU都是以单核的形式顺序执行机器指令。C语言、PHP正是这种顺序编程语言的代表，即所有的指令都是以串行的方式执行，在相同的时刻有且仅有一个CPU在顺序执行程序的指令。随着处理器技术的发展，单核时代以提升处理器频率来提高运行效率的方式遇到了瓶颈。单核CPU的发展的停滞，给多核CPU的发展带来了机遇。相应地，编程语言也开始逐步向并行化的方向发展。Go语言正是在多核和网络化的时代背景下诞生的原生支持并发的编程语言。</p>
+<h3 id="goroutine">Goroutine</h3>
+<p>goroutine 是 Go 语言特有的并发体，是一种轻量级的线程，由go关键字启动。在真实的Go语言的实现中，goroutine 和系统线程也不是等价的。尽管两者的区别实际上只是一个量的区别，但正是这个量变引发了 Go 语言并发编程质的飞跃。</p>
+<pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+    //并发版hello world
+    go println(&quot;hello world&quot;)
+}
+</code></pre>
+<p>每个系统级线程都会有一个固定大小的栈（一般默认可能是8MB），这个栈主要用来保存函数递归调用时参数和局部变量。固定了栈的大小导致了两个问题：一是对于很多只需要很小的栈空间的线程来说是一个巨大的浪费，二是对于少数需要巨大栈空间的线程来说又面临栈溢出的风险。相反，一个 goroutine 会以一个很小的栈启动（可能是2KB或4KB），当遇到当前栈空间不足时， goroutine 会根据需要动态地伸缩栈的大小。因为启动的代价很小，所以我们可以轻易地启动成千上万个 goroutine 。<br>
+Go的调度器使用了一些技术手段，可以在n个操作系统线程上多工调度m个 goroutine 。只有在当前 goroutine 发生阻塞时才会导致调度，同时发生在用户态，切换的代价要比系统线程低得多。运行时有一个 <code>runtime.GOMAXPROCS</code> 变量，用于控制当前运行正常非阻塞 goroutine 的系统线程数目。在Go语言中启动一个 goroutine 不仅和调用函数一样简单，而且 goroutine 之间调度代价也很低，这些因素极大地促进了并发编程的流行和发展。</p>
+<h3 id="channel">Channel</h3>
+<p>在并发编程中，对共享资源的正确访问需要精确的控制，在目前的绝大多数语言中，都是通过加锁等线程同步方案来解决这一问题。而Go语言却另辟蹊径，它将共享的值通过Channel传递，数据竞争从设计层面上就被杜绝了。通过通道来传值是Go语言推荐的做法，虽然像引用计数这类简单的并发问题通过原子操作或互斥锁就能很好地实现，但是通过Channel来控制访问能够让你写出更简洁正确的程序。</p>
+<h4 id="创建通道">创建通道</h4>
+<pre><code class="language-go">//非缓冲通道
+ch1 := make(chan int)
+//缓冲通道
+ch2 := make(chan int, 1)
+</code></pre>
+<p>非缓冲通道必须确保有协程正在尝试读取当前通道，否则写操作就会阻塞直到有其它协程来从通道中读东西。</p>
+<h4 id="读写通道">读写通道</h4>
+<pre><code class="language-go">//从通道读,
+data, ok := &lt;-ch1
+data := &lt;-ch1
+//往通道写
+ch2 &lt;-data
+//使用range读，通道没数据for就会阻塞，通道关闭就会退出for
+for v := range ch1 {
+    println(v)
+}
+//多路通道
+for {
+    select {
+    case v := &lt;-ch1:
+        println(v)
+    case v := &lt;-ch2:
+        println(v)
+    }
+}
+</code></pre>
+<p>通道满了，写操作就会阻塞，协程就会进入休眠，直到有其它协程读通道挪出了空间，协程才会被唤醒。通道空了，读操作就会阻塞，协程也会进入睡眠，直到有其它协程写通道装进了数据才会被唤醒。</p>
+<pre><code class="language-go">//关闭通道
+close(ch1)
+</code></pre>
+<p>读取一个已经关闭的通道会立即返回通道类型的「零值」，而写一个已经关闭的通道会抛异常。使用 <code>for range</code> 读取时用完要记得关闭通道，否则会阻塞。</p>
+<h3 id="同步控制">同步控制</h3>
+<p>根据 Go 语言规范，main 函数退出时程序结束，不会等待任何后台线程。因为 goroutine 的执行和 main 函数的返回事件是并发的，谁都有可能先发生，所以什么时候打印，能否打印都是未知的。</p>
+<h4 id="sleep">sleep</h4>
+<pre><code class="language-go">func main() {
+    go println(&quot;你好, 世界&quot;)
+    time.Sleep(time.Second)
+    //或者一个死循环
+    for {}
+}
+</code></pre>
+<p>不可靠，因为实际协程执行时间未知</p>
+<h4 id="互斥锁">互斥锁</h4>
+<pre><code class="language-go">func main() {
+    var mu sync.Mutex
+    mu.Lock()
+    go func() {
+        println(&quot;你好, 世界&quot;)
+        mu.Unlock()
+    }()
+    mu.Lock()
+}
+</code></pre>
+<p>主携程中第二次获取锁时阻塞</p>
+<h4 id="通道">通道</h4>
+<pre><code class="language-go">func main() {
+    ch := make(chan int, 1)
+    go func() {
+        println(&quot;你好, 世界&quot;)
+        ch&lt;-1
+    }()
+    &lt;-ch
+}
+</code></pre>
+<p>从ch取值，由于通道为空所以会阻塞直到有数据写入</p>
+<h4 id="原子等待组">原子等待组</h4>
+<pre><code class="language-go">func main() {
+    var wg sync.WaitGroup
+    wg.Add(10)
+
+    for i := 1; i &lt; 10; i++ {
+        //wg.Add(1)
+        go func(n int) {
+            println(&quot;你好, &quot;, n)
+            wg.Done()   //wg.Add(-1)
+        }(i)
+    }
+    //等待协程完成
+    wg.Wait()
+}
+</code></pre>
+<p>如果不把i作为参数传入闭包函数，闭包go协程里面引用的是变量i的地址，所有的go协程启动后等待调用，很可能在for循环完成之后才被调用，所以输出结果很多都是10</p>
+<h3 id="编程技巧">编程技巧</h3>
+<h4 id="控制并发数">控制并发数</h4>
+<p>虽然启动一个携程代价很小，但是也不能无限制地创建携程，否则导致cpu占用过高</p>
+<pre><code class="language-go">func main() {
+    var limit = make(chan int, 3)
+    for _, id := range ids {
+        go func() {
+            limit &lt;- 1
+            worker(id)
+            &lt;-limit
+        }()
+    }
+    for {}
+}
+</code></pre>
+<h4 id="超时处理">超时处理</h4>
+<p>当限制并发数的时候，如果有大量写通道，会造成通道阻塞过长</p>
+<pre><code class="language-go">func main() {
+    select {
+    case id &lt;- 1:
+        println(&quot;success&quot;)
+    case &lt;- time.After(3 * time.Second):
+        println(&quot;timeout&quot;)
+    }
+}
+</code></pre>
+<h4 id="生产者消费者实例">生产者消费者实例</h4>
+<p>例如在tcp编程中，一个 goroutine 用来读，一个 goroutine 用来写，读写 goroutine 间用通道传递消息</p>
+<pre><code class="language-go">func main()  {
+	listen, _ := net.Listen(&quot;tcp4&quot;, &quot;:9001&quot;)
+	defer listen.Close()
+	for {
+		conn, _ := listen.Accept()
+
+		ch := make(chan string, 10)
+		go read(conn, ch)
+		go write(conn, ch)
+	}
+}
+
+func write(conn net.Conn, ch &lt;-chan string) {
+	for msg := range ch {
+		_, err := conn.Write([]byte(msg))
+		if err != nil {
+			break
+		}
+	}
+}
+
+func read(conn net.Conn, ch chan&lt;- string) {
+	for {
+		msg := make([]byte, 1024)
+		n, err := conn.Read(msg)
+		if err != nil {
+			break
+		}
+		ch &lt;- string(msg[:n])
+	}
+}
+</code></pre>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-13 18:41</span>&nbsp;
+<a href="https://www.cnblogs.com/luke44/">luke44</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12884177" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12884177);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 481000, cb_blogApp = 'luke44', cb_blogUserGuid = '83fcb549-2479-43aa-a10c-08d65c9406c0';
+    var cb_entryId = 12884177, cb_entryCreatedDate = '2020-05-13 18:41', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 luke44
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <!-- 右下角live2d效果 -->
+<script type="text/javascript">
+if(document.documentElement.clientWidth >= 768){
+  setTimeout(() => {
+        L2Dwidget.init({
+                "model": {
+                        "scale": 0.5
+                },
+                "display": {
+                        "position": "right",
+                        "width": 180,
+                        "height": 260,
+                        "hOffset": 0,
+                        "vOffset": -20
+                },
+                "mobile": {
+                        "show": true,
+                        "scale": 0.5
+                },
+                "react": {
+                        "opacityDefault": 0.7,
+                        "opacityOnHover": 0.2
+                },
+                dev: {
+			"border": false,	
+		}
+        });
+  }, 1000)
+}
+</script>
+    </div>
+</body>
+</html>

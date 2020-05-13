@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <meta property="og:description" content="[TOC] 背包问题（0 1背包问题） 假设你是个小偷，背着一个可装 4 磅东西的背包。 你可盗窃的商品有如下3件（摘自算法图解）： 作为一名优秀的小偷，为了让盗窃的商品价值最高，该选择哪些商品呢？ " />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>偷东西的学问-背包问题 - 周若梣 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=OL4qeo1LNGlN1rKIhv5UctANvt0M6Nx6kLzr_ffx3Xk" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/gongyanzh/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/gongyanzh/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/gongyanzh/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=ADZDggF2NY5PM0ARXcJqg_CWlG3B72Ho5xCyukyKFbg"></script>
+    <script>
+        var currentBlogId = 567347;
+        var currentBlogApp = 'gongyanzh';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var skinName = 'SimpleMemory';
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/gongyanzh/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/gongyanzh/"></a>
+</h1>
+<h2>
+江山美人
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/gongyanzh/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%91%A8%E8%8B%A5%E6%A2%A3">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/gongyanzh/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+61&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+4</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/gongyanzh/p/12884203.html">偷东西的学问-背包问题</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p><div class="toc"><div class="toc-container-header">目录</div><ul><li><a href="#背包问题（0-1背包问题）">背包问题（0-1背包问题）</a></li><li><a href="#可以偷商品的一部分吗（完全背包问题）">可以偷商品的一部分吗（完全背包问题）</a></li><li><a href="#物以稀为贵（多重背包问题）">物以稀为贵（多重背包问题）</a></li></ul></div></p>
+<h3 id="背包问题（0-1背包问题）">背包问题（0-1背包问题）</h3>
+<p>假设你是个小偷，背着一个可装 4 磅东西的背包。 你可盗窃的商品有如下3件（摘自算法图解）：</p>
+<p><img src="https://gitee.com/gongyanzh/blogpic/raw/master/pictures/image-20200513145644729.png" alt="image-20200513145644729"></p>
+<p>作为一名优秀的小偷，为了让盗窃的商品价值最高，该选择哪些商品呢？</p>
+<p>很明显，小偷需要在满足背包容量要求下，选择价值总和最大的。</p>
+<p><strong>使用动态规划</strong></p>
+<blockquote>
+<p>先解决小背包（子背包）问题，再逐步解决原来的问题</p>
+</blockquote>
+<img src="https://gitee.com/gongyanzh/blogpic/raw/master/pictures/image-20200513145630444.png" alt="image-20200513145630444">
+<ul>
+<li>
+<p>状态转移</p>
+<p><code>cell[i][j]</code>表示前<code>i</code>种物品恰放入一个容量为<code>j</code>的背包能获得的最大价值</p>
+<p><img src="https://gitee.com/gongyanzh/blogpic/raw/master/pictures/image-20200513150226229.png" alt="image-20200513150226229"></p>
+</li>
+</ul>
+<p><div class="math display">\[cell[i][j] = max(cell[i-1][j],v[i]*k_i+cell[i-1][j-k_i*w[i]]),k \in \{0,1\}
+\]</div></p><p><strong>coding</strong></p>
+<pre><code class="language-python">def knapsack(goods,volume):
+    dp = [[0]*(volume+1) for _ in range(len(goods))]
+    
+    for j in range(1,volume+1):#初始化
+        if goods[0][1] &lt;= j:
+            dp[0][j] = goods[0][0]
+
+    for i in range(1,len(goods)):
+        for j in range(1,volume+1):
+            if goods[i][1] &lt;= j:
+                dp[i][j] = max(dp[i-1][j],goods[i][0]+dp[i-1][j-goods[i][1]])
+            else:
+                dp[i][j] = dp[i-1][j]
+    return dp
+
+goods = [[1500,1],[3000,4],[2000,3]]#价值 重量
+volume = 4 
+knapsack(goods,volume)
+</code></pre>
+<p>结果</p>
+<p><img src="https://gitee.com/gongyanzh/blogpic/raw/master/pictures/image-20200513185757739.png" alt="image-20200513185757739"><br>
+<br>
+<img src="https://gitee.com/gongyanzh/blogpic/raw/master/pictures/image-20200513154016981.png" alt="image-20200513154016981"></p>
+<p>将吉他和笔记本电脑装入背包时价值最高，为3500美元。</p>
+<p>在刚才的盗窃活动中，每次可以偷的东西都是一个完整的个体，对每个物品要么选择偷，要么不偷，所以称为 <strong>0-1背包问题</strong></p>
+<h3 id="可以偷商品的一部分吗（完全背包问题）">可以偷商品的一部分吗（完全背包问题）</h3>
+<p>假如你在杂货店行窃，可偷成袋的扁豆和大米，但如果整袋装不下，可打开包装，再将背包 倒满。在这种情况下，不再是要么偷要么不偷，而是可偷商品的一部分。如何使用动态规划来处 理这种情形呢？</p>
+<p>假设有如下商品（<strong>每种商品无限多</strong>）可供选择。</p>
+<p><img src="https://gitee.com/gongyanzh/blogpic/raw/master/pictures/image-20200513171140832.png" alt="image-20200513171140832"></p>
+<p>略作思索，小偷发现在决定偷哪些东西时， 动态规划 是一个不错的方法，因为：</p>
+<p>从每种物品<code>i</code> 偷/不偷 (<span class="math inline">\(k_i \in \{0,1\}\)</span>)变为 偷多少单位 (<span class="math inline">\(k_i\in \{0,1,2,...,W/w_i\}\)</span>)，背包总容量 <code>W</code>，第<code>i</code>类物品占 <span class="math inline">\(w_i\)</span> 的空间。</p>
+<ul>
+<li>
+<p>状态转移</p>
+<p><img src="https://gitee.com/gongyanzh/blogpic/raw/master/pictures/image-20200513172830899.png" alt="image-20200513172830899"></p>
+<p><div class="math display">\[cell[i][j] = max(cell[i-1][j],v[i]*k_i+cell[i-1][j-k_i*w[i]])\\k_i\in \{0,1,2,...,W/w_i\}
+\]</div></p></li>
+</ul>
+<p><strong>coding</strong></p>
+<pre><code class="language-python">def knapsack(w,v,volume):
+    dp = [[0]*(volume+1) for _ in range(len(w))]
+    
+    for j in range(1,volume+1):
+        for k in range(j//w[0]+1):
+            dp[0][j] = max(dp[0][j],v[0]*k)
+
+    for i in range(1,len(w)):
+        for j in range(1,volume+1):
+            temp = 0
+            for k in range(j//w[i]+1):
+                temp = max(temp,v[i]*k+dp[i-1][j-k*w[i]])
+            dp[i][j] = max(dp[i-1][j],temp)
+    return dp
+
+weight = [2,1,3] #重量
+value = [5,2,4]#价值 
+volume = 7
+
+knapsack(weight,value,volume)
+</code></pre>
+<p>结果<br>
+<img src="https://gitee.com/gongyanzh/blogpic/raw/master/pictures/image-20200513182126844.png" alt="image-20200513182535086"></p>
+<h3 id="物以稀为贵（多重背包问题）">物以稀为贵（多重背包问题）</h3>
+<p>由于燕麦的营养价值比较高，所以只有一点点，可偷的商品受到了限制</p>
+<p><img src="https://gitee.com/gongyanzh/blogpic/raw/master/pictures/image-20200513182535086.png" alt="image-20200513182126844"></p>
+<p><strong>每种商品只有部分可供选择</strong> <span class="math inline">\(k_i&lt;M_i\)</span>，但问题还是</p>
+<p>偷多少单位 (<span class="math inline">\(k_i\in \{0,1,2,...,W/w_i\}\)</span>)，背包总容量 <code>W</code>，第<code>i</code>类物品占 <span class="math inline">\(w_i\)</span> 的空间。</p>
+<p>多重背包问题 相比 完全背包问题多了限制条件，即可偷物品的数量。</p>
+<p>同样使用动态规划</p>
+<ul>
+<li>状态转移<p><div class="math display">\[cell[i][j] = max(cell[i-1][j],v[i]*k_i+cell[i-1][j-k_i*w[i]])\\k_i\in \{0,1,2,...,W/w_i\},k_i \leq M_i
+\]</div></p></li>
+</ul>
+<p><strong>coding</strong></p>
+<pre><code class="language-python">def knapsack(w,v,M,volume):
+    dp = [[0]*(volume+1) for _ in range(len(w))]
+    
+    for j in range(1,volume+1):
+        for k in range(min(j//w[0],M[0])+1):#增加限制条件
+            dp[0][j] = max(dp[0][j],v[0]*k)
+
+    for i in range(1,len(w)):
+        for j in range(1,volume+1):
+            temp = 0
+            for k in range(min(j//w[i],M[i])+1):#增加限制条件
+                temp = max(temp,v[i]*k+dp[i-1][j-k*w[i]])
+            dp[i][j] = max(dp[i-1][j],temp)
+    return dp
+
+weight = [2,1,3] #重量
+value = [5,2,4] #价值 
+maxk = [1,3,3] #数量
+volume = 7
+
+knapsack(weight,value,maxk,volume)
+</code></pre>
+<p>结果</p>
+<p><img src="https://gitee.com/gongyanzh/blogpic/raw/master/pictures/image-20200513183907161.png" alt="image-20200513183907161"></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-05-13 19:34</span>&nbsp;
+<a href="https://www.cnblogs.com/gongyanzh/">周若梣</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12884203" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12884203);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 567347, cb_blogApp = 'gongyanzh', cb_blogUserGuid = 'a0b3da17-b692-e611-845c-ac853d9f53ac';
+    var cb_entryId = 12884203, cb_entryCreatedDate = '2020-05-13 19:34', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 周若梣
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

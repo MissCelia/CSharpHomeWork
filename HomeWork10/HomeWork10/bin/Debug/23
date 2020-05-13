@@ -1,0 +1,536 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>律持乐 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
+    <link id="MainCss" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip.min.css?v=1CubIA3L29CO3-6VLJIOrrj2uGfyKeX_-xaumWzHk7o" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/bert227/custom.css?v=98YIiEjEXswoXovGSO/TMriDxvM=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/darkgreentrip/bundle-darkgreentrip-mobile.min.css?v=0pGk3D9Ik_jI4q1TALBT2ybOjIePHS_80_0J4DDOQiY" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/bert227/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/bert227/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/bert227/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=ADZDggF2NY5PM0ARXcJqg_CWlG3B72Ho5xCyukyKFbg"></script>
+    <script>
+        var currentBlogId = 439015;
+        var currentBlogApp = 'bert227';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'darkgreentrip';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/bert227/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/bert227/">律持乐</a>
+</h1>
+<h2>
+志不强者智不达！
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/bert227/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%BE%8B%E6%8C%81%E4%B9%90">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/bert227/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+59&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+4</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/bert227/archive/2018/12/12.html">2018年12月12日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/bert227/p/10108223.html">
+[置顶]    JavaScript 金额、数字、千分位、千分位、保留几位小数、舍入舍去、支持负数
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：JavaScript 金额、数字 千分位格式化、保留指定位数小数、支持四舍五入、进一法、去尾法 字段说明： number：需要处理的数字； decimals：保留几位小数，默认两位，可不传； dec_point：小数点符号，默认为‘.’，可不传； thousands_sep：千分位符号，默认为‘,’            <a href="https://www.cnblogs.com/bert227/p/10108223.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2018-12-12 14:36 律持乐 阅读 (285) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10108223" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/bert227/archive/2020/05/13.html">2020年5月13日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/bert227/p/12882947.html">
+    利用 Maven 构造 Spring Cloud 微服务架构 模块使用 spring Boot构建
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：采用Maven 聚合工程搭建 Spring Cloud 使用工具： IntelliJ IDEA 版本： 2019.2.2 maven 版本： 3.6.0 JDK 版本：1.8.0_181 1、搭建聚合工程的父模块 2、配置父模块POM &lt;?xml version=&quot;1.0&quot; encoding=&quot;UT            <a href="https://www.cnblogs.com/bert227/p/12882947.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-05-13 19:54 律持乐 阅读 (0) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12882947" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/bert227/archive/2019/11/18.html">2019年11月18日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/bert227/p/11883404.html">
+    AES加解密
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：AES加密 private static final String KEY_AES_ALGORITHM = &quot;AES&quot;; private static final String DEFAULT_CIPHER_ALGORITHM = &quot;AES/ECB/PKCS5Padding&quot;;//默认的加密算法 /            <a href="https://www.cnblogs.com/bert227/p/11883404.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-11-18 17:11 律持乐 阅读 (139) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11883404" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/bert227/archive/2019/08/20.html">2019年8月20日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/bert227/p/11385223.html">
+    JAVA  POI XSSFWorkbook导出扩展名为xlsx的Excel，附带weblogic 项目导出Excel文件错误的解决方案
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：现在很多系统都有导出excel的功能，总结一下自己之前写的，希望能帮到其他人，这里我用的是XSSFWorkbook，我们项目在winsang 用的Tomcat，LInux上用的weblogic服务器，刚开始win开发完各种导出都没有问题，但到了linux上就不行了，后面才只知道weblogic会给r            <a href="https://www.cnblogs.com/bert227/p/11385223.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-08-20 19:59 律持乐 阅读 (625) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11385223" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/bert227/archive/2019/08/16.html">2019年8月16日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/bert227/p/11364551.html">
+    JAVA 文件的上传下载
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：一、上传文件 1、使用 transferTo 上传 2.使用 org.springframework.util.FileCopyUtils.copy() 二、下载文件            <a href="https://www.cnblogs.com/bert227/p/11364551.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-08-16 16:04 律持乐 阅读 (23) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11364551" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/bert227/archive/2019/08/13.html">2019年8月13日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/bert227/p/11347817.html">
+    shell启停服务脚本模板
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：一、 启动脚本模板：符合幂等性 如果该服务已经启动，再次调用该脚本，不会报错，也就是说可以反复多次调用，另外启动成功返回 一个参数，提供给自动发布平台校验该服务是否启动 二、停止脚本，符合幂等性 可以重复调用            <a href="https://www.cnblogs.com/bert227/p/11347817.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-08-13 18:54 律持乐 阅读 (206) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11347817" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/bert227/archive/2019/06/10.html">2019年6月10日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/bert227/p/11000743.html">
+    JAVA 设计模式之 原型模式详解
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：原型模式（Prototype Pattern）是指原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。 原型模式利用的是克隆的原理，创建新的对象，JDK提供的Cloneable 和JSON、springUtil里面的克隆都是一般浅克隆，与之对应的还有深克隆 1、浅克隆 浅克隆也是穿件一个新            <a href="https://www.cnblogs.com/bert227/p/11000743.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-06-10 22:21 律持乐 阅读 (52) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11000743" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/bert227/archive/2019/05/22.html">2019年5月22日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/bert227/p/10903357.html">
+    JAVA 设计模式之 工厂模式详解
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：一、简单工厂模式 简单工厂模式（Simple Factory Pattern）是指由一个工厂对象决定创建出哪一种产品类 的实例。属于创建型模式，但它不属于 GOF，23 种设计模式 （参考资料： http://en.wikipedia.org/wiki/Design_Patterns#Pattern            <a href="https://www.cnblogs.com/bert227/p/10903357.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-05-22 23:22 律持乐 阅读 (1162) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10903357" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/bert227/archive/2019/05/21.html">2019年5月21日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/bert227/p/10902357.html">
+    spring 中常用的设计模式
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：一、 Spring 中常见的设计模式 工厂模式 ： BeanFactory 装饰器模式： BeanWrapper 代理模式： AopProxy 单例模式： ApplicationContext 委派模式： DispatcherServlet 策略模式: HandlerMapping 适配器模式： H            <a href="https://www.cnblogs.com/bert227/p/10902357.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-05-21 21:03 律持乐 阅读 (2121) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10902357" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/bert227/archive/2019/05/20.html">2019年5月20日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/bert227/p/10897328.html">
+    JAVA 设计的七大原则
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：一、开闭原则 开闭原则（Open-Closed Principle, OCP）是指一个软件实体如类、模块和函数应该对 扩展开放，对修改关闭。 所谓的开闭，也正是对扩展和修改两个行为的一个原则。强调 的是用抽象构建框架，用实现扩展细节。 可以提高软件系统的可复用性及可维护性。开 闭原则，是面向对象设计            <a href="https://www.cnblogs.com/bert227/p/10897328.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-05-20 23:55 律持乐 阅读 (456) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10897328" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/bert227/archive/2019/04/30.html">2019年4月30日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/bert227/p/10794280.html">
+    电脑开机一支黑屏 ，只有鼠标
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：电脑开机黑屏只有鼠标箭头怎么解决 1、按下键盘上的Ctrl+Alt+Del组合键或者 Ctrl+Shift+Esc组合键，点击：任务管理器 2、选择右上角的应用程序 3.如果右下角有新建任务按钮就点击它，没有就在【应用程序】 区域 点击鼠标右键， 3.输入&#160;explorer 点击确定，就OK 了            <a href="https://www.cnblogs.com/bert227/p/10794280.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-04-30 09:43 律持乐 阅读 (53) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10794280" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/bert227/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 律持乐
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

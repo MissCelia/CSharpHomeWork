@@ -1,0 +1,10 @@
+C:\Users\Celia\source\repos\HomeWork10\HomeWork10\obj\Debug\HomeWork10.csprojAssemblyReference.cache
+C:\Users\Celia\source\repos\HomeWork10\HomeWork10\obj\Debug\HomeWork10.Form1.resources
+C:\Users\Celia\source\repos\HomeWork10\HomeWork10\obj\Debug\HomeWork10.Properties.Resources.resources
+C:\Users\Celia\source\repos\HomeWork10\HomeWork10\obj\Debug\HomeWork10.csproj.GenerateResource.cache
+C:\Users\Celia\source\repos\HomeWork10\HomeWork10\obj\Debug\HomeWork10.csproj.CoreCompileInputs.cache
+C:\Users\Celia\source\repos\HomeWork10\HomeWork10\bin\Debug\HomeWork10.exe.config
+C:\Users\Celia\source\repos\HomeWork10\HomeWork10\bin\Debug\HomeWork10.exe
+C:\Users\Celia\source\repos\HomeWork10\HomeWork10\bin\Debug\HomeWork10.pdb
+C:\Users\Celia\source\repos\HomeWork10\HomeWork10\obj\Debug\HomeWork10.exe
+C:\Users\Celia\source\repos\HomeWork10\HomeWork10\obj\Debug\HomeWork10.pdb
